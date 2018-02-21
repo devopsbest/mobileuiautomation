@@ -1,0 +1,90 @@
+---
+Android:
+  LoginPage:
+    Activity: "com.ef.core.engage.ui.screens.activity.EnglishTownLoginActivity"
+    username: id;txtName
+    password: id;txtPwd
+    loginbtn: id;btnLogin
+
+  CourseOverViewPage:
+    Activity: "com.ef.core.engage.ui.screens.activity.EnglishTownCourseOverviewActivity"
+    settings: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/toolbar"]/android.widget.ImageButton[1]
+    lessonall: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/unit_lessons_page"]/android.widget.FrameLayout
+    lessonone: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/unit_lessons_page"]/android.widget.FrameLayout[1]
+    lessontwo: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/unit_lessons_page"]/android.widget.FrameLayout[2]
+    lessonthree: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/unit_lessons_page"]/android.widget.FrameLayout[3]
+    lessonfour: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/unit_lessons_page"]/android.widget.FrameLayout[4]
+    lessonpl: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/unit_lessons_page"]/android.widget.FrameLayout[5]
+    Download: id;download_progress_bar
+    Level_move_on: id;btn_move_on
+    Change_level_button: id;imageViewDropDown
+    unittitle: id; textViewTitle
+    logout: id;textview_logout
+    finished_status: xpath;//android.widget.FrameLayout['%d']/*[@resource-id="com.ef.core.engage.englishtown:id/tatusLayout"]
+
+  LessonOverViewPage:
+    Activity: "com.ef.core.engage.ui.screens.activity.EnglishTownLessonActivity"
+    Lesson_collapse: id;image_collapse
+    back_button: id;Navigate up
+
+  ModuleOverViewPage:
+    Activity: "com.ef.core.engage.ui.screens.activity.EnglishTownModuleActivity"
+    modules: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/template_menu"]/android.widget.RelativeLayout
+    module_download: id;download_button
+    module_start: id;start_activity
+    activity_skip_button: id;activity_skip_button
+    countinue_button: id;text_continue
+
+  SettingPage:
+    language: id;textview_set_language
+    languageset: xpath;//*[contains(@resource-id,'levelName') and @text='%s']
+    language_back: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/action_bar"]/android.widget.ImageButton
+    sync: id;textview_sync
+    logout: id;textview_logout
+
+  ManageCoursePage:
+    Back_button: id;Navigate up
+    GE_course: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/tabs_change_course"]/android.widget.TextView[1]
+    BE_course: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/tabs_change_course"]/android.widget.TextView[2]
+    # lesson from 0 to 15
+    Lessons: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/course_structure_level_card_view"][%d]
+    Lessonsall: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/course_structure_level_card_view"]/[@text='%d')]
+    Lessonchild: xpath;//*[@resource-id="com.ef.core.engage.englishtown:id/course_structure_level_card_view"]/android.widget.RelativeLayout/*[@resource-id="com.ef.core.engage.englishtown:id/course_structure_level_number"]
+
+
+
+
+
+IOS:
+  LoginPage:
+    username: xpath;//XCUIElementTypeTextField[@value='Username']
+    password: xpath;//XCUIElementTypeSecureTextField
+    loginbtn: id;LOGIN
+
+  CourseOverViewPage:
+    settings: xpath;//XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]
+    settings_logout: id;Logout
+    settings_languae: id;Language
+    Selectlevel: id;Select level
+    lessonall: xpath;//XCUIElementTypeApplication[@name="EF English Live"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeTable/XCUIElementTypeCell
+    lessonone: xpath;//XCUIElementTypeApplication[@name="EF English Live"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeTable/XCUIElementTypeCell[1]
+    lessontwo: xpath;//XCUIElementTypeApplication[@name="EF English Live"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeTable/XCUIElementTypeCell[2]
+    lessonthree: xpath;//XCUIElementTypeApplication[@name="EF English Live"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeTable/XCUIElementTypeCell[3]
+    lessonfour: xpath;//XCUIElementTypeApplication[@name="EF English Live"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeTable/XCUIElementTypeCell[4]
+    lessonpl: xpath;//XCUIElementTypeApplication[@name="EF English Live"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell[1]/XCUIElementTypeTable/XCUIElementTypeCell[5]
+    Download: id;unit ready to download
+
+  LessonOverViewPage:
+    back_button: id;back button black
+
+
+  ModuleOverViewPage:
+    moduleall: xpath;//XCUIElementTypeOther[@name="lesson_page"]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther
+    moduleach: xpath;//XCUIElementTypeOther[@name="lesson_page"]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther['%d']
+    moduleone: xpath;//XCUIElementTypeOther/XCUIElementTypeButton
+    module_download: name;btn_moduleintro_download
+    passmodule: name;PASS MODULE
+    module_start: name;btn_moduleintro_start
+    activity_skip_button: name;btnQApass
+    countinue_button: name;btnContinue
+    arrow: name;arrow

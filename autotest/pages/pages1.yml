@@ -1,0 +1,56 @@
+---
+Android:
+  LoginPage:
+    Activity: "com.ef.core.engage.ui.screens.activity.EnglishTownLoginActivity"
+    username: id_txtName
+    password: id_txtPwd
+    loginbtn: id_btnLogin
+
+  CourseOverViewPage:
+    Activity: "com.ef.core.engage.ui.screens.activity.EnglishTownCourseOverviewActivity"
+    LessonOne: imageView
+    Download: download_progress_bar
+    Setting: xpath_//*[@resource-id="com.ef.core.engage.englishtown:id/toolbar"]/android.widget.ImageButton[1]
+    settings_languae: id_textview_set_language
+    settings_sync: id_textview_sync
+    settings_logout: id_textview_logout
+    Level_move_on: id_btn_move_on
+
+  LessonOverViewPage:
+    Activity: "com.ef.core.engage.ui.screens.activity.EnglishTownLessonActivity"
+    Lesson_collapse: id_image_collapse
+    Back_button: id_syncTextView
+
+  ModuleOverViewPage:
+    Activity: "com.ef.core.engage.ui.screens.activity.EnglishTownModuleActivity"
+    modules: xpath_//*[@resource-id="com.ef.core.engage.englishtown:id/template_menu"]/android.widget.RelativeLayout
+    activity_download: id_download_button
+    start_activity: id_start_activity
+    activity_skip_button: id_activity_skip_button
+    countinue_button: id_text_continue
+    back_button: id_background_image
+
+IOS:
+  LoginPage:
+    username: xpath_//XCUIElementTypeTextField[@value='Username']
+    password: xpath_//XCUIElementTypeSecureTextField
+    loginbtn: id: LOGIN
+
+  CourseOverViewPage:
+    settings: xpath: //XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]
+    logoutbtn: id: Logout
+    Language: id: Language
+    backbtn: id: back button black
+    Selectlevel: id: Select level
+    lessonone: id: pnlLesson_1_1
+
+  ModuleOverViewPage:
+    moduleall: //XCUIElementTypeOther[@name="lesson_page"]/XCUIElementTypeOther[2]/XCUIElementTypeOther
+    moduleach: /XCUIElementTypeOther[@name="lesson_page"]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther['%d']
+    moduleone: //XCUIElementTypeOther[@name="pnlModule_Vocabulary"]/XCUIElementTypeOther/XCUIElementTypeButton
+    download: btn_moduleintro_download
+    passmodule: id: PASS MODULE
+    startbtn: id: btn_moduleintro_start
+    passbtn: id: btnQApass
+    countiune: id: btnContinue
+    arrow: id: arrow
